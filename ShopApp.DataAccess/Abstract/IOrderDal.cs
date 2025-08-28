@@ -2,14 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ShopApp.DataAccess.Abstract
 {
-	public interface IProductDal : IRepository<Product>//interfaceten miras aldırdık
+	public interface IOrderDal : IRepository<Order>
 	{/*ayrıca bunun yazılma sebebı kendı ıcın ayrı metodlar yazabılmemızı saglıyor olmasıdır*/
-		IEnumerable<Product> GetPopularProducts();/*populer ürünleri getirecek*/
 	}
 }

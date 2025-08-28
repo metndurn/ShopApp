@@ -9,41 +9,36 @@ using System.Threading.Tasks;
 
 namespace ShopApp.DataAccess.Concrete.EfCore
 {
-	public class EfCoreProductDal : IProductDal
+	public class EfCoreCategoryDal : ICategoryDal
 	{
 		ShopContext _context = new ShopContext();
-		public void Add(Product entity)
+		public void Add(Category entity)
 		{
-			_context.Products.Add(entity);
+			_context.Categories.Add(entity);
 			_context.SaveChanges();
 		}
 
-		public void Delete(Product entity)
+		public void Delete(Category entity)
 		{
 			throw new NotImplementedException();
 		}
 
-		public IQueryable<Product> GetAll(Expression<Func<Product, bool>> filter)
+		public IQueryable<Category> GetAll(Expression<Func<Category, bool>> filter)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Product GetById(int id)
+		public Category GetById(int id)
 		{
 			throw new NotImplementedException();
 		}
 
-		public Product GetOne(Expression<Func<Product, bool>> filter)
+		public Category GetOne(Expression<Func<Category, bool>> filter)
 		{
 			throw new NotImplementedException();
 		}
 
-		public IEnumerable<Product> GetPopularProducts()
-		{
-			throw new NotImplementedException();
-		}
-
-		public void Update(Product entity)
+		public void Update(Category entity)
 		{
 			throw new NotImplementedException();
 		}
