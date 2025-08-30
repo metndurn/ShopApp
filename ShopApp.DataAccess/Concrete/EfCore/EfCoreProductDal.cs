@@ -9,41 +9,9 @@ using System.Threading.Tasks;
 
 namespace ShopApp.DataAccess.Concrete.EfCore
 {
-	public class EfCoreProductDal : IProductDal
+	public class EfCoreProductDal : EfCoreGenericRepository<Product, ShopContext>, IProductDal
 	{
-		ShopContext _context = new ShopContext();
-		public void Add(Product entity)
-		{
-			_context.Products.Add(entity);
-			_context.SaveChanges();
-		}
-
-		public void Delete(Product entity)
-		{
-			throw new NotImplementedException();
-		}
-
-		public IQueryable<Product> GetAll(Expression<Func<Product, bool>> filter)
-		{
-			throw new NotImplementedException();
-		}
-
-		public Product GetById(int id)
-		{
-			throw new NotImplementedException();
-		}
-
-		public Product GetOne(Expression<Func<Product, bool>> filter)
-		{
-			throw new NotImplementedException();
-		}
-
-		public IEnumerable<Product> GetPopularProducts()
-		{
-			throw new NotImplementedException();
-		}
-
-		public void Update(Product entity)
+		public IEnumerable<Product> GetPopularProducts()//popüler ürünleri getirecek
 		{
 			throw new NotImplementedException();
 		}

@@ -12,7 +12,7 @@ namespace ShopApp.DataAccess.Abstract
 	{
 		T GetById(int id);/*id ye göre ürünü getirecek*/
 		T GetOne(Expression<Func<T, bool>> filter);/*tek bir ürün getirecek*/
-		IQueryable<T> GetAll(Expression<Func<T, bool>> filter);/*butun ürünleri getirecek*/
+		IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null);/*butun ürünleri getirecek*/
 		void Add(T entity);/*ürün ekleme*/
 		void Update(T entity);/*ürün güncelleme*/
 		void Delete(T entity);/*ürün silme*/
